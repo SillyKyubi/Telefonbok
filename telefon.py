@@ -10,3 +10,9 @@ telefonbok.append(person2)
 
 print("Hei, dette er telefonboka:")
 print(telefonbok)
+
+def vis_alle():
+    for person in telefonbok:
+        print(f"{person["navn"]}: {person["nummer"]}")
+
+vis_alle()
