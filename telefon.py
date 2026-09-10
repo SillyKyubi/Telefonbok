@@ -1,15 +1,12 @@
 #test
+#opg 5 tror jeg idk
+
 telefonbok = []
-
 person1 = {"navn": "Nora", "nummer": "41326696"}
-
 person2 = {"navn": "Edvin", "nummer": "46403456"}
 
 telefonbok.append(person1)
 telefonbok.append(person2)
-
-print("Hei, dette er telefonboka:")
-print(telefonbok)
 
 def legg_til():
     navn = input("Hva er navnet til personen?")
@@ -38,8 +35,29 @@ def search():
         print("Det er ingen i telefonboken med det navnet.")
 
 
+# ---- #meny# ---- #
 
+while True:
+    print("(--- Telefonbok ---)")
+    print("1. Vis liste")
+    print("2. Legg til i liste")
+    print("3. Søk")
+    print("4. Exit")
+    print("(---(          )---)")
 
-legg_til()
-vis_alle()
-search()
+    valg = input("Hva vil du gjøre? (Tall eller navn)").lower()
+
+    if valg == "1" or valg == "vis" or valg =="vis liste":
+        vis_alle()
+
+    elif valg == "2" or valg == "legg til" or valg == "Legg til i liste":
+        legg_til()
+
+    elif valg == "3" or valg == "søk":
+        search()
+
+    elif valg == "4" or valg == "exit":
+        print("Avslutter, ha en fin dag!")
+        break
+
+    # ----- # ----- #
