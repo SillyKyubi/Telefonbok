@@ -19,11 +19,27 @@ def legg_til():
     telefonbok.append(ny_venn)
     print(f"{navn} ble lagt til i telefonboka!")
 
-
 #steg 2
 def vis_alle():
     for person in telefonbok:
         print(f"{person["navn"]}: {person["nummer"]}")
 
+#steg 3
+def search():
+    search_navn = input("Skriv inn et navn som du leter etter: ")
+    er_der = False
+
+    for person in telefonbok:
+        if person["navn"].lower() == search_navn.lower():
+            print(f"her er: {person["navn"]}: {person["nummer"]}")
+            er_der = True
+    
+    if not er_der:
+        print("Det er ingen i telefonboken med det navnet.")
+
+
+
+
 legg_til()
 vis_alle()
+search()
